@@ -1,0 +1,29 @@
+[
+  {
+    "assetName": "MonetWaterLilies",
+    "title": "Water Lilies",
+    "artist": "Claude Monet",
+    "year": "1906",
+    "source": "Art Institute of Chicago, object 16568",
+    "license": "CC0 / Public Domain",
+    "sourceURL": "https://www.artic.edu/artworks/16568/water-lilies"
+  },
+  {
+    "assetName": "VanGoghBedroom",
+    "title": "The Bedroom",
+    "artist": "Vincent van Gogh",
+    "year": "1889",
+    "source": "Art Institute of Chicago, object 28560",
+    "license": "CC0 / Public Domain",
+    "sourceURL": "https://www.artic.edu/artworks/28560/the-bedroom"
+  },
+  {
+    "assetName": "HokusaiGreatWave",
+    "title": "The Great Wave",
+    "artist": "Katsushika Hokusai",
+    "year": "ca. 1830–32",
+    "source": "The Metropolitan Museum of Art, object 56353",
+    "license": "Open Access / Public Domain",
+    "sourceURL": "https://www.metmuseum.org/art/collection/search/56353"
+  }
+]

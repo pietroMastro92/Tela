@@ -1,0 +1,29 @@
+{
+  "book": {
+    "title": "Gli occhi di Monna Lisa",
+    "author": "Thomas Schlesser",
+    "publisher": "Longanesi",
+    "isbn": "9788830461581",
+    "masterworkCount": 52
+  },
+  "includedOpenImages": 36,
+  "permissionRequired": [
+    {"chapter":36,"artist":"Marcel Duchamp","title":"Bottle Rack","year":"1914 / 1964","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cLz5nr"},
+    {"chapter":38,"artist":"Georgia O'Keeffe","title":"Red, Yellow and Black Streak","year":"1924","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/ckX8AX"},
+    {"chapter":39,"artist":"René Magritte","title":"The Red Model","year":"1935","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/xBym9Fx"},
+    {"chapter":40,"artist":"Constantin Brâncuși","title":"Bird in Space","year":"1941","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cbLy4oX"},
+    {"chapter":41,"artist":"Hannah Höch","title":"Mother","year":"1930","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cbjkKj"},
+    {"chapter":42,"artist":"Frida Kahlo","title":"The Frame","year":"1938","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/EaZN1kV"},
+    {"chapter":43,"artist":"Pablo Picasso","title":"Aubade","year":"1942","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cdqKEpK"},
+    {"chapter":44,"artist":"Jackson Pollock","title":"Painting (Silver over Black, White, Yellow and Red)","year":"1948","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cajbjx6"},
+    {"chapter":45,"artist":"Niki de Saint Phalle","title":"The Bride","year":"1963","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cdLAp8d"},
+    {"chapter":46,"artist":"Hans Hartung","title":"T 1964-H45","year":"1964","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/co46enL"},
+    {"chapter":47,"artist":"Anna-Eva Bergman","title":"Black Prow (26)","year":"1976","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cMzjMG"},
+    {"chapter":48,"artist":"Jean-Michel Basquiat","title":"Untitled","year":"1983","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/c9nByAa"},
+    {"chapter":49,"artist":"Louise Bourgeois","title":"Precious Liquids","year":"1992","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/s04yuuz"},
+    {"chapter":50,"artist":"Marina Abramović","title":"Boat Emptying, Stream Entering","year":"1989","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cgjzopE"},
+    {"chapter":51,"artist":"Christian Boltanski","title":"The Impossible Life of C.B.","year":"2001","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/cKxkMBA"},
+    {"chapter":52,"artist":"Pierre Soulages","title":"Painting 200 × 220 cm, 22 April 2002","year":"2002","museumURL":"https://www.centrepompidou.fr/fr/ressources/oeuvre/c84jyb"}
+  ],
+  "note": "These entries are metadata-only. Tela does not bundle their museum reproductions because an open image license was not verified. Add an image only after obtaining and recording permission compatible with distribution."
+}
