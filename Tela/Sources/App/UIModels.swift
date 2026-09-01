@@ -331,6 +331,7 @@ final class TelaSessionStore {
         guard value != tileCount else { return }
         tileCount = value
         defaults.set(value, forKey: Key.tileCount)
+        revision &+= 1
     }
 
     func setSoundEnabled(_ enabled: Bool) {
@@ -338,6 +339,7 @@ final class TelaSessionStore {
         soundEnabled = enabled
         defaults.set(enabled, forKey: Key.sound)
         notificationService.soundEnabled = enabled
+        revision &+= 1
     }
 
     func setNotificationsEnabled(_ enabled: Bool) {
@@ -345,6 +347,7 @@ final class TelaSessionStore {
         notificationsEnabled = enabled
         defaults.set(enabled, forKey: Key.notifications)
         notificationService.isEnabled = enabled
+        revision &+= 1
     }
 
     func dismissCelebration() { celebrationArtwork = nil }
@@ -376,6 +379,7 @@ final class TelaSessionStore {
         if let data = try? JSONEncoder().encode(normalized) {
             defaults.set(data, forKey: "tela.ui.selectedArtwork")
         }
+        revision &+= 1
     }
 
     func selectNextArtwork() {

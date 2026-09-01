@@ -80,9 +80,11 @@ struct GalleryView: View {
             }
             .navigationSplitViewColumnWidth(min: 190, ideal: 220)
         } detail: {
-            galleryContent
+            VStack(spacing: 0) {
+                GallerySearchField(text: $searchText)
+                galleryContent
+            }
                 .navigationTitle(selectedShelf.title)
-                .searchable(text: $searchText, placement: .toolbar, prompt: "Cerca opera o artista")
                 .toolbar { galleryToolbar }
         }
         .fileImporter(
@@ -190,6 +192,35 @@ struct GalleryView: View {
         case .failure:
             importMessage = "Importazione annullata"
         }
+    }
+}
+
+private struct GallerySearchField: View {
+    @Binding var text: String
+
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.secondary)
+            TextField("Cerca opera o artista", text: $text)
+                .textFieldStyle(.plain)
+                .accessibilityLabel("Cerca opera o artista")
+            if !text.isEmpty {
+                Button {
+                    text = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                }
+                .buttonStyle(.plain)
+                .foregroundStyle(.secondary)
+                .accessibilityLabel("Cancella ricerca")
+            }
+        }
+        .padding(8)
+        .background(.quaternary, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .padding(.horizontal, TelaMetrics.contentPadding)
+        .padding(.top, 16)
+        .padding(.bottom, 4)
     }
 }
 

@@ -33,6 +33,17 @@ final class SettingsRegressionTests: XCTestCase {
         XCTAssertEqual(store.core.configuration.shortBreakDuration, 10 * 60)
     }
 
+    func testSelectingArtworkUpdatesCurrentSelection() {
+        let defaults = isolatedDefaults()
+        let store = makeStore(defaults: defaults)
+        let candidate = store.bundledArtworks[1]
+
+        store.selectArtwork(candidate)
+
+        XCTAssertEqual(store.currentArtwork.id, candidate.id)
+        XCTAssertNotNil(defaults.data(forKey: "tela.ui.selectedArtwork"))
+    }
+
     func testSuspendedFocusPreviewRemainsVisibleUntilAbandoned() {
         let defaults = isolatedDefaults()
         let store = makeStore(defaults: defaults)
