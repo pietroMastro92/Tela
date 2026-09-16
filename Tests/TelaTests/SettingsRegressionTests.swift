@@ -33,6 +33,19 @@ final class SettingsRegressionTests: XCTestCase {
         XCTAssertEqual(store.core.configuration.shortBreakDuration, 10 * 60)
     }
 
+    func testCompletionSoundPreferenceCanBeDisabledAndReenabled() {
+        let defaults = isolatedDefaults()
+        let store = makeStore(defaults: defaults)
+
+        store.setSoundEnabled(false)
+        XCTAssertFalse(store.soundEnabled)
+        XCTAssertFalse(defaults.bool(forKey: "tela.ui.soundEnabled"))
+
+        store.setSoundEnabled(true)
+        XCTAssertTrue(store.soundEnabled)
+        XCTAssertTrue(defaults.bool(forKey: "tela.ui.soundEnabled"))
+    }
+
     func testSelectingArtworkUpdatesCurrentSelection() {
         let defaults = isolatedDefaults()
         let store = makeStore(defaults: defaults)

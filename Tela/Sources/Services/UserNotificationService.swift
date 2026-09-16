@@ -1,5 +1,9 @@
 import Foundation
 
+#if canImport(AppKit)
+import AppKit
+#endif
+
 #if canImport(UserNotifications)
 import UserNotifications
 
@@ -71,8 +75,16 @@ public final class UserNotificationService: NSObject, Notifications, @unchecked 
     }
 
     public func notify(_ notification: TimerNotification) {
-        // Scheduling is handled by `schedule`; completion events are exposed
-        // for recording adapters and do not create duplicate notifications.
+        guard case .completed = notification, soundEnabled else { return }
+#if canImport(AppKit)
+        // In background the scheduled notification owns the sound. In the
+        // foreground macOS may suppress it, so play Tela's gentle chime here.
+        let notificationsEnabled = isEnabled
+        Task { @MainActor in
+            guard NSApplication.shared.isActive || !notificationsEnabled else { return }
+            NSSound(named: NSSound.Name("Glass"))?.play()
+        }
+#endif
     }
 
     private var scheduledIdentifier: String { "\(identifierPrefix).scheduled" }

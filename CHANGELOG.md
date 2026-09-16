@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 (4)
+
+- Aggiunto un suono dolce al completamento di focus e pause, attivo anche quando Tela è in primo piano.
+- Il suono può essere disabilitato separatamente dalle notifiche nelle impostazioni.
+
 ## 1.0.2 (3)
 
 - Corretta la galleria: un solo campo di ricerca, con filtro per titolo e artista.

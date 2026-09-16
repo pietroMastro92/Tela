@@ -56,14 +56,14 @@ struct SettingsView: View {
         Form {
             Section("Al termine di una fase") {
                 Toggle(isOn: soundBinding) {
-                    Label("Riproduci un suono", systemImage: "speaker.wave.2")
+                    Label("Suono dolce al termine", systemImage: "speaker.wave.2")
                 }
                 Toggle(isOn: notificationsBinding) {
                     Label("Mostra una notifica", systemImage: "bell.badge")
                 }
             }
             Section {
-                Text("Le notifiche vengono richieste solo quando avvii il timer e possono essere gestite nelle Impostazioni di Sistema.")
+                Text("Il suono viene riprodotto da Tela mentre l’app è attiva; in background viene usato quello della notifica di sistema.")
                     .font(.callout)
                     .foregroundStyle(.secondary)
             }
